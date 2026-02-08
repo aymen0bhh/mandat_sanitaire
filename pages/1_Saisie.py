@@ -11,7 +11,7 @@ import os
 from copy import copy
 from datetime import date, datetime
 
-DATA_FILE = os.path.join("data", "mandat sanitaire 2022.xlsx")
+DATA_FILE = os.path.join("data", "mandat sanitaire 2026.xlsx")
 
 # ---------------------------
 # CHARGEMENT CSS
@@ -777,9 +777,9 @@ st.markdown('<div class="download-wrap">', unsafe_allow_html=True)
 
 with open(DATA_FILE, "rb") as f:
     st.download_button(
-        label="⬇️ Télécharger mandat_sanitaire_2022.xlsx",
+        label="⬇️ Télécharger mandat_sanitaire_2026.xlsx",
         data=f,
-        file_name="mandat_sanitaire_2022.xlsx",
+        file_name="mandat_sanitaire_2026.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         use_container_width=True,
         key="dl_excel_full"

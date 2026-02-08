@@ -9,7 +9,7 @@ import base64
 import io
 import os
 
-DATA_FILE = os.path.join("data", "mandat sanitaire 2022.xlsx")
+DATA_FILE = os.path.join("data", "mandat sanitaire 2026.xlsx")
 
 def get_file_mtime(path: str) -> float:
     try:
@@ -247,7 +247,7 @@ st.markdown("""
     <div class="vet-logo-section">
         <div class="vet-icon">🐾</div>
         <div>
-            <div class="vet-title">Dashboard Mandat Sanitaire 2022</div>
+            <div class="vet-title">Dashboard Mandat Sanitaire 2026</div>
             <div class="vet-subtitle">Campagnes de Vaccination - Région de Sousse</div>
         </div>
     </div>
