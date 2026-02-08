@@ -623,11 +623,12 @@ with tab2:
         if not filtered_df.empty:
             # Sélection d'un enregistrement
             selected_seq = st.selectbox(
-                "Sélectionner un enregistrement à modifier/supprimer",
+                "Sélectionner un enregistrement",
                 options=filtered_df['seq'].tolist(),
-                format_func=lambda x: f"#{x} - {filtered_df[filtered_df['seq']==x]['nom'].iloc[0]} - {filtered_df[filtered_df['seq']==x]['date'].iloc[0]}",
+                format_func=lambda x: f"#{x} - {filtered_df[filtered_df['seq']==x]['nom'].iloc[0]} - {pd.to_datetime(filtered_df[filtered_df['seq']==x]['date'].iloc[0]).strftime('%d/%m/%Y')}",
                 key="selected_record"
             )
+
             
             if selected_seq:
                 selected_record = filtered_df[filtered_df['seq'] == selected_seq].iloc[0].to_dict()
