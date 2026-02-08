@@ -915,8 +915,8 @@ with tab5:
             montant_caprins = nb_caprins * prix_caprin
             montant_total = montant_ovins + montant_caprins
             details = [
-                {"Espèce": "Ovins vaccinés 🐑", "Quantité": f"{nb_ovins:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_ovin:.2f} DH", "Montant": f"{montant_ovins:,.2f} DH".replace(",", " ")},
-                {"Espèce": "Caprins vaccinés 🐐", "Quantité": f"{nb_caprins:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_caprin:.2f} DH", "Montant": f"{montant_caprins:,.2f} DH".replace(",", " ")},
+                {"Espèce": "Ovins vaccinés 🐑", "Quantité": f"{nb_ovins:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_ovin:.2f} DT", "Montant": f"{montant_ovins:,.2f} DT".replace(",", " ")},
+                {"Espèce": "Caprins vaccinés 🐐", "Quantité": f"{nb_caprins:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_caprin:.2f} DT", "Montant": f"{montant_caprins:,.2f} DT".replace(",", " ")},
             ]
 
         elif selected_key == "ovin_clavelee":
@@ -924,7 +924,7 @@ with tab5:
             nb_ovins = float(filtered_df["ovins_vaccines"].sum())
             montant_total = nb_ovins * prix_ovin
             details = [
-                {"Espèce": "Ovins vaccinés 🐏", "Quantité": f"{nb_ovins:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_ovin:.2f} DH", "Montant": f"{montant_total:,.2f} DH".replace(",", " ")},
+                {"Espèce": "Ovins vaccinés 🐏", "Quantité": f"{nb_ovins:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_ovin:.2f} DT", "Montant": f"{montant_total:,.2f} DT".replace(",", " ")},
             ]
 
         elif selected_key == "bovin_aphto":
@@ -932,7 +932,7 @@ with tab5:
             nb_bovins = float(filtered_df["bovins_vaccines"].sum())
             montant_total = nb_bovins * prix_bovin
             details = [
-                {"Espèce": "Bovins vaccinés 🐄", "Quantité": f"{nb_bovins:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_bovin:.2f} DH", "Montant": f"{montant_total:,.2f} DH".replace(",", " ")},
+                {"Espèce": "Bovins vaccinés 🐄", "Quantité": f"{nb_bovins:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_bovin:.2f} DT", "Montant": f"{montant_total:,.2f} DT".replace(",", " ")},
             ]
 
         else:  # rage
@@ -940,13 +940,13 @@ with tab5:
             nb_chiens = float(filtered_df["chiens_vaccines"].sum())
             montant_total = nb_chiens * prix_chien
             details = [
-                {"Espèce": "Chiens vaccinés 🐕", "Quantité": f"{nb_chiens:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_chien:.2f} DH", "Montant": f"{montant_total:,.2f} DH".replace(",", " ")},
+                {"Espèce": "Chiens vaccinés 🐕", "Quantité": f"{nb_chiens:,.0f}".replace(",", " "), "Prix unitaire": f"{prix_chien:.2f} DT", "Montant": f"{montant_total:,.2f} DT".replace(",", " ")},
             ]
 
         # Affichage KPI Cards
         kpi_cards([
             {"label": "Lignes filtrées", "value": f"{len(filtered_df):,}".replace(",", " "), "delta": "📌 Après filtres"},
-            {"label": "Montant total", "value": f"{montant_total:,.2f} DH".replace(",", " "), "delta": "💰 Total à payer"},
+            {"label": "Montant total", "value": f"{montant_total:,.2f} DT".replace(",", " "), "delta": "💰 Total à payer"},
         ])
 
         # Détail du calcul
